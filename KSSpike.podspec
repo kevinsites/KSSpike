@@ -8,12 +8,13 @@ Pod::Spec.new do |s|
     s.module_name = "KSSpike"
     s.summary = "KSSpike SDK for the iOS platform"
     s.requires_arc = true
-    s.version = "0.0.1"
+    s.version = "0.0.2"
     s.author = { "KSSpike" => "KSSpike" }
     s.homepage = "https://github.com/kevinsites/KSSpike.git"
     
     s.source = { :git => "https://github.com/kevinsites/KSSpike.git", :tag => "v#{s.version}"}
     s.source_files = "KSSpike/**/*.{h,swift}"
+    s.exclude_files = 'KSSpike/Advanced/Advanced.swift'
 
     s.default_subspecs = 'Core'
 
