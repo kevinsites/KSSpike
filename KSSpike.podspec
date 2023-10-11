@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.module_name = "KSSpike"
     s.summary = "KSSpike SDK for the iOS platform"
     s.requires_arc = true
-    s.version = "0.0.2"
+    s.version = "0.0.3"
     s.author = { "KSSpike" => "KSSpike" }
     s.homepage = "https://github.com/kevinsites/KSSpike.git"
     
@@ -24,8 +24,9 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Advanced' do |advanced|
+        s.ios.deployment_target = '12.0'
         advanced.source_files = "KSSpike/**/*.{h,swift}"
-        advanced.dependency 'Alamofire'
+        advanced.dependency 'FingerprintPro', '~> 2.0'
     end
     
     s.license = { :type => "MIT", :text => <<-LICENSE
